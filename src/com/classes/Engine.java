@@ -6,7 +6,6 @@
 package com.classes;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Scanner;
 
 /*
@@ -458,10 +457,13 @@ public class Engine {
             
             switch (option) {
                 case "1":
-                    option = in.nextLine();
                     System.out.println("***********Gestion de Costos***********");
                     System.out.println("Modificar precio a:"                   );
                     System.out.println("  1.Habitacion   2.Piso   3.Paquete       ");
+                    
+                    System.out.println("opcion:"); 
+                    option = in.nextLine();
+                    
                     switch (option) {
                         case "1":
                             System.out.println("**************Precio de Habitacion**************" );
@@ -481,24 +483,24 @@ public class Engine {
                     break;
                     
                 case "2":
-                    System.out.println("******Administracion de Servicios*******"               );
-                    
+                    System.out.println("******Administracion de Servicios*******"               );               
                     System.out.println("Seleccion de Paquete:");
                     System.out.println("    1.Basico    2.Premium   3.Personalizado"            );
+                    
+                    System.out.println("opcion:"); 
+                    option = in.nextLine();
+                    
                     switch (option) {
                         case "1":
-                            System.out.println("****************Paquete Basico****************" );
-                            
+                            this.BasicoPaquete();
                             break;
                             
                         case "2":
-                            System.out.println("****************Paquete Premium****************");
-                            
+                            this.PremiumPaquete();
                             break;
                         
                         case "3":
-                            System.out.println("*************Paquete Perzonalizado*************");
-                            
+                            this.PersonalizadoPaquete();
                             break;
                     }
                     break;  
@@ -513,4 +515,138 @@ public class Engine {
             }//fin swicth(adminHotelStats)
         }//fin while (adminHotelStats)
     } 
+    
+//Paquetes
+    
+    public void PremiumPaquete(){
+        String option;
+        boolean admStats = true;
+        while(admStats){
+            System.out.println("");
+            System.out.println("**************PAQUETE PREMIUM**************");
+            System.out.println("Seleccione la operacion que desea realizar:");
+            System.out.println("1 - Agregar servicio de Paquetes");
+            System.out.println("2 - Modificar servicio de Paquete");
+            System.out.println("3 - Eliminar servicio de Paquete");
+            System.out.println("4 - Regresar");
+            
+            option = in.nextLine();
+            
+            switch (option){
+                case "1":
+                    System.out.println("*******Agregar servicio de Paquetes*******");
+                    
+                    break;
+                    
+                case "2":
+                    System.out.println("************Modificar Servicios************");
+                    
+                    System.out.println("Internet Ilimitado"                      );
+                    System.out.println("Servicio a la Habitacion"                );
+                    System.out.println("Acceso a la piscina"                     );
+                    System.out.println("Acceso al buffet desayuno"               );
+                    System.out.println("Acceso al minibar"                       );
+                    break;
+                    
+                case "3":
+                    System.out.println("*******Eliminar servicio de Paquetes*******");
+                    
+                    break; 
+                    
+                case "4":
+                    admStats = false;
+                    break;
+                    
+                default:
+                    System.out.println("Favor ingrese una opcion valida");
+            }
+        }
+    }
+    
+    public void BasicoPaquete(){
+        String option;
+        boolean admStats = true;
+        
+        while(admStats){
+            System.out.println("");
+            System.out.println("**************PAQUETE BASICO**************");
+            System.out.println("Seleccione la operacion que desea realizar:");
+            System.out.println("1 - Agregar servicio de Paquetes");
+            System.out.println("2 - Modificar servicio de Paquete");
+            System.out.println("3 - Eliminar servicio de Paquete");
+            System.out.println("4 - Regresar");
+            
+            option = in.nextLine();
+            
+            switch (option){
+                case "1":
+                    System.out.println("*******Agregar servicio de Paquetes*******");
+                    
+                    break;
+                    
+                case "2":
+                    System.out.println("************Modificar Servicios************");
+                    
+                    System.out.println("Internet Ilimitado"                      );
+                    System.out.println("Acceso a la piscina"                     );
+                
+                case "3":
+                    System.out.println("*******Eliminar servicio de Paquetes*******");
+                    
+                    break; 
+                    
+                case "4":
+                    admStats = false;
+                    break;
+                    
+                default:
+                    System.out.println("Favor ingrese una opcion valida");
+            }
+        }
+    }
+    
+    public void PersonalizadoPaquete(){
+        String option;
+        boolean admStats = true;
+        
+        while(admStats){
+            System.out.println("");
+            System.out.println("************PAQUETE PERSONALIZADO************");
+            System.out.println("Seleccione la operacion que desea realizar:");
+            System.out.println("1 - Agregar servicio de Paquetes");
+            System.out.println("2 - Modificar servicio de Paquete");
+            System.out.println("3 - Eliminar servicio de Paquete");
+            System.out.println("4 - Regresar");
+            
+            option = in.nextLine();
+            
+            switch (option){
+                case "1":
+                    System.out.println("*******Agregar servicio de Paquetes*******");
+                    
+                    break;
+                    
+                case "2":
+                    System.out.println("************Modificar Servicios************");
+                    
+//                    System.out.println("Internet Ilimitado"                      );
+//                    System.out.println("Servicio a la Habitacion"                );
+//                    System.out.println("Acceso a la piscina"                     );
+//                    System.out.println("Acceso al buffet desayuno"               );
+//                    System.out.println("Acceso al minibar"                       );
+//algunos de estos                
+                case "3":
+                    System.out.println("*******Eliminar servicio de Paquetes*******");
+                    
+                    break; 
+                    
+                case "4":
+                    admStats = false;
+                    break;
+                    
+                default:
+                    System.out.println("Favor ingrese una opcion valida");
+            }
+        }
+    }    
 }
