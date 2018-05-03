@@ -172,9 +172,7 @@ public class Piso {
         
         while(admStats){
             System.out.println("");
-            System.out.println("");
-            System.out.println("*****HOTEL VIÑA RAFINHA*****");
-            System.out.println("**ADMINISTRACION DE HABITACIONES**");
+            System.out.println("*****ADMINISTRACION DE HABITACIONES*****");
             System.out.println("Seleccione la operacion que desea hacer:");
             System.out.println("1 - Revisar estado de habitaciones.");
             System.out.println("2 - Habilitar/desabilitar habitacion.");
