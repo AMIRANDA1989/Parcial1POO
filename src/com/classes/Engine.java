@@ -465,34 +465,40 @@ public class Engine {
                     switch (option) {
                         case "1":
                             System.out.println("**************Precio de Habitacion**************" );
+                            
                             break;
                             
                         case "2":
                             System.out.println("****************Precio por Piso****************");
+                            
                             break;
                             
                         case "3":
                             System.out.println("**************Precio de Paquetes**************" );
+                            
                             break;     
                     }
                     break;
                     
                 case "2":
-                    System.out.println("******Administracion de Servicios*******");
+                    System.out.println("******Administracion de Servicios*******"               );
                     
                     System.out.println("Seleccion de Paquete:");
-                    System.out.println("    1.Basico    2.Premium   3.Personalizado");
+                    System.out.println("    1.Basico    2.Premium   3.Personalizado"            );
                     switch (option) {
                         case "1":
                             System.out.println("****************Paquete Basico****************" );
+                            
                             break;
                             
                         case "2":
                             System.out.println("****************Paquete Premium****************");
+                            
                             break;
                         
                         case "3":
                             System.out.println("*************Paquete Perzonalizado*************");
+                            
                             break;
                     }
                     break;  
