@@ -13,16 +13,14 @@ public class Venta {
     private String fecha;
     private String res1;
     private String res2;
-    private double preciodia;
     private double total;
     
-    public Venta(int codVenta,int codReservacion,String fecha,String res1,String res2,double preciodia,double total){
+    public Venta(int codVenta,int codReservacion,String fecha,String res1,String res2,double total){
         this.codVenta=codVenta;
         this.codReservacion=codReservacion;
         this.fecha=fecha;
         this.res1=res1;
         this.res2=res2;
-        this.preciodia=preciodia;
         this.total=total;
     }
     
@@ -48,10 +46,6 @@ public class Venta {
         return res2;
     }
     
-    public double getPreciodia() {
-        return preciodia;
-    }
-    
     public double getTotal() {
         return total;
     }
@@ -74,10 +68,6 @@ public class Venta {
     
     public void setRes2(String res2) {
         this.res2 = res2;
-    }
-    
-    public void setPreciodia(double preciodia) {
-        this.preciodia = preciodia;
     }
     
     public void setTotal(double total) {
