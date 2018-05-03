@@ -6,23 +6,20 @@
 package com.parcial1;
 
 import com.classes.Engine;
-
-/**
+/*
  *
  * @author allan
- */
+*/
 public class Parcial1 {
-
-    /**
+    /*
      * @param args the command line arguments
-     */
+    */
     public static void main(String[] args) {
         // TODO code application logic here
-        Engine sistema = new Engine();
+        Engine system = new Engine();
         //Inicializando configuracion
-        sistema.initSettings(6, 10);
+        system.initSettings(6, 10);
         //Iniciando sistema
-        sistema.initSystem();
+        system.initSystem();
     }
-    
 }
