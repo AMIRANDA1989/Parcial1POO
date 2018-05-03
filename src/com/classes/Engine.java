@@ -107,11 +107,11 @@ public class Engine {
     
     public void initSettings(int pisos, int habitaciones){
         ArrayList<Habitacion> rooms;
-        //System.out.println("Inicializando configuracion de pisos");
-        //System.out.println(Character.toChars('A'+pisos));
+        System.out.println("Inicializando configuracion de pisos");
+        System.out.println(Character.toChars('A'+pisos));
         //creando el piso
         for (char alphabet = 'A'; alphabet <= 'A'+pisos; alphabet++) {
-            //System.out.println(Character.toString(alphabet));
+            System.out.println(Character.toString(alphabet));
             rooms = new ArrayList();
             Piso newpiso = new Piso();
             newpiso.setCodPiso(Character.toString(alphabet));
