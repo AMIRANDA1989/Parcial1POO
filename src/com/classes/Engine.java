@@ -525,9 +525,9 @@ public class Engine {
             System.out.println("");
             System.out.println("**************PAQUETE PREMIUM**************");
             System.out.println("Seleccione la operacion que desea realizar:");
-            System.out.println("1 - Agregar servicio de Paquetes");
-            System.out.println("2 - Modificar servicio de Paquete");
-            System.out.println("3 - Eliminar servicio de Paquete");
+            System.out.println("1 - Agregar servicio");
+            System.out.println("2 - Modificar servicio");
+            System.out.println("3 - Eliminar servicio");
             System.out.println("4 - Regresar");
             
             option = in.nextLine();
@@ -571,9 +571,9 @@ public class Engine {
             System.out.println("");
             System.out.println("**************PAQUETE BASICO**************");
             System.out.println("Seleccione la operacion que desea realizar:");
-            System.out.println("1 - Agregar servicio de Paquetes");
-            System.out.println("2 - Modificar servicio de Paquete");
-            System.out.println("3 - Eliminar servicio de Paquete");
+            System.out.println("1 - Agregar servicio");
+            System.out.println("2 - Modificar servicio");
+            System.out.println("3 - Eliminar servicio");
             System.out.println("4 - Regresar");
             
             option = in.nextLine();
@@ -613,9 +613,9 @@ public class Engine {
             System.out.println("");
             System.out.println("************PAQUETE PERSONALIZADO************");
             System.out.println("Seleccione la operacion que desea realizar:");
-            System.out.println("1 - Agregar servicio de Paquetes");
-            System.out.println("2 - Modificar servicio de Paquete");
-            System.out.println("3 - Eliminar servicio de Paquete");
+            System.out.println("1 - Agregar servicio");
+            System.out.println("2 - Modificar servicio");
+            System.out.println("3 - Eliminar servicio");
             System.out.println("4 - Regresar");
             
             option = in.nextLine();
