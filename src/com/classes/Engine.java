@@ -31,6 +31,7 @@ public class Engine {
         System.out.println("*****************BIENVENIDO***************");
         while (this.isStatus()){
             System.out.println("");
+            System.out.println("");
             System.out.println("************HOTEL VIÑA RAFINHA************");
             System.out.println("Seleccione en el menú la opcion que desea:");
             System.out.println("1 - Control de Hotel"               );
