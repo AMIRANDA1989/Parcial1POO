@@ -445,7 +445,7 @@ public class Engine {
         boolean adminHotelStats = true;
         
         System.out.println("Seleccione la operacion que desea hacer:");
-        System.out.println("1 - Gestion de Precios "                 );
+        System.out.println("1 - Gestion de Costos "                 );
         System.out.println("2 - Administracion de Servicios"         );
         System.out.println("3 - Regresar..."                         );
             
@@ -458,22 +458,43 @@ public class Engine {
             
             switch (option) {
                 case "1":
-                    System.out.println("***********Gestion de Precios***********");
-                    System.out.println("Modificar precio por:"                   );
-                    System.out.println("  1.Habitacion      2.Paquete       "    );
+                    option = in.nextLine();
+                    System.out.println("***********Gestion de Costos***********");
+                    System.out.println("Modificar precio a:"                   );
+                    System.out.println("  1.Habitacion   2.Piso   3.Paquete       ");
+                    switch (option) {
+                        case "1":
+                            System.out.println("**************Precio de Habitacion**************" );
+                            break;
+                            
+                        case "2":
+                            System.out.println("****************Precio por Piso****************");
+                            break;
+                            
+                        case "3":
+                            System.out.println("**************Precio de Paquetes**************" );
+                            break;     
+                    }
                     break;
                     
                 case "2":
                     System.out.println("******Administracion de Servicios*******");
-                    System.out.println("Seleccion de Paquete:");
-                    System.out.println("  1.Basico           2.Premium"          );
                     
-                    System.out.println("Modificar Servicios:"                    );
-                    System.out.println("Internet Ilimitado"                      );
-                    System.out.println("Servicio a la Habitacion"                );
-                    System.out.println("Acceso a la piscina"                     );
-                    System.out.println("Acceso al buffet desayuno"               );
-                    System.out.println("Acceso al minibar"                       );
+                    System.out.println("Seleccion de Paquete:");
+                    System.out.println("    1.Basico    2.Premium   3.Personalizado");
+                    switch (option) {
+                        case "1":
+                            System.out.println("****************Paquete Basico****************" );
+                            break;
+                            
+                        case "2":
+                            System.out.println("****************Paquete Premium****************");
+                            break;
+                        
+                        case "3":
+                            System.out.println("*************Paquete Perzonalizado*************");
+                            break;
+                    }
                     break;  
                     
                 case "3":
