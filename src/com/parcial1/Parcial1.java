@@ -18,7 +18,7 @@ public class Parcial1 {
         // TODO code application logic here
         Engine system = new Engine();
         //Inicializando configuracion
-        system.initSettings(6, 10);
+        //system.initSettings(6, 10);
         //Iniciando sistema
         system.initSystem();
     }

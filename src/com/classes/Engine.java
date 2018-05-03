@@ -6,6 +6,7 @@
 package com.classes;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
 
 /*
@@ -19,6 +20,7 @@ public class Engine {
     private String operation; //Tipo de operacion realizada
     private ArrayList<Piso> pisosHotel = new ArrayList(); //Pisos del Hotel
     Scanner in = new Scanner(System.in); //Sirve para leer el input del usuario
+    
 
     /*
     * initSystem inicializa el sistema, es necesario ejecutarlo despues de la declaracion de un objeto de Clase Engine.
@@ -142,6 +144,37 @@ public class Engine {
     }
     
     /*
+    agregarPiso
+    Sirve para agregar un piso adicional al edificio
+    */
+    private void agregarPiso(){
+        Piso p = new Piso();
+        p.setCodPiso(Character.toString(Piso.letraPiso));
+        this.pisosHotel.add(p);
+        Piso.letraPiso++; //incrementando el codigo del piso para la proxima insercion
+        System.out.println("Piso agregado exitosamente con codigo: " + p.getCodPiso());
+        System.out.println("");
+    }
+    
+    /*eliminarPiso
+    Sirve para eliminar un piso del edificio.
+    PARAMETROS
+    codigoPiso: Codigo del piso a eliminar
+    RETORNA
+    1: Eliminacion exitosa
+    0: Eliminacion fallida
+    */
+    private int eliminarPiso(String codPiso){
+        int location = this.buscarPisoPorCodigo(codPiso);
+        if(location > -1 ){
+            this.pisosHotel.remove(location);
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+    
+    /*
     buscarPisoPorCodigo
     Sirve para buscar un piso por código
     retorna la ubicacion del piso que se quiere buscar
@@ -174,13 +207,16 @@ public class Engine {
         String option;
         String pisoOpt;
         boolean controlHotelStats = true;
+        int location;
         
         while (controlHotelStats){
             System.out.println("Seleccione la operacion que desea realizar:");
             System.out.println("1 - Revisar estado de pisos."            );
             System.out.println("2 - Administrador de habitaciones."     );
             System.out.println("3 - Habilitar/Deshabilitar pisos"        );
-            System.out.println("4 - Regresar..."                         );
+            System.out.println("4 - Agregar Piso"        );
+            System.out.println("5 - Eliminar Piso"        );
+            System.out.println("6 - Regresar..."                         );
             
             System.out.println("opcion:");
             
@@ -192,20 +228,22 @@ public class Engine {
                     //System.out.println(pisosHotel.size());
                     for(int i = 0; i < pisosHotel.size(); i++){
                         Piso p = pisosHotel.get(i);
-                        System.out.println("Piso " + p.getCodPiso() + ": " + p.isHabilitado());
+                        String habilitado = p.isHabilitado()? "Habilitado" : "Deshabilitado";
+                        System.out.println("[Piso " + p.getCodPiso() + "] Estado: " + habilitado + ", Numero Habitaciones: " + p.getHabitaciones().size());
                     }
+                    System.out.println("");
                     break;
                     
                 case "2":
-                    System.out.println("**********Administrador de habitaciones**********"     );
+                    System.out.println("**********Administrador de pisos**********"     );
                     System.out.println("Ingrese el codigo del piso: ");
                     pisoOpt = in.nextLine();
                                    
-                    int pisoLocation = this.buscarPisoPorCodigo(pisoOpt);
+                    location = this.buscarPisoPorCodigo(pisoOpt);
                     
                     //validando si el piso ingresado existe
-                    if(pisoLocation > -1){
-                        Piso p = pisosHotel.get(pisoLocation);
+                    if(location > -1){
+                        Piso p = pisosHotel.get(location);
                         p.adminHabitaciones();
                     }else{
                         System.out.println("No se ha encontrado el piso ingresado");
@@ -217,7 +255,7 @@ public class Engine {
                     System.out.println("Ingrese el codigo del piso: ");
                     pisoOpt = in.nextLine();
                                    
-                    int location = this.buscarPisoPorCodigo(pisoOpt);
+                    location = this.buscarPisoPorCodigo(pisoOpt);
                     
                     //validando si el piso ingresado existe
                     if(location > -1){
@@ -235,8 +273,41 @@ public class Engine {
                     }else{
                         System.out.println("No se ha encontrado el piso ingresado");
                     }
-                    
+                    break;
+                
                 case "4":
+                    System.out.println("**********Agregar Piso**********"      );
+                    System.out.println("Esta por agregar un piso adicional al hotel, presione Y para continuar");
+                    if(in.nextLine().equals("Y")){
+                        this.agregarPiso();
+                    }
+                    break;
+                    
+                case "5":
+                    System.out.println("**********Eliminar Piso**********"      );
+                    System.out.println("Ingrese el codigo del piso: ");
+                    pisoOpt = in.nextLine();
+                                   
+                    location = this.buscarPisoPorCodigo(pisoOpt);
+                    
+                    //validando si el piso ingresado existe
+                    if(location > -1){
+                        String cod = this.pisosHotel.get(location).getCodPiso();
+                        System.out.println("El piso seleccionado sera eliminado, presione Y para confirmar");
+                        if(in.nextLine().equals("Y")){
+                            
+                            if( this.eliminarPiso(cod) == 1 ){
+                                System.out.println("Piso Eliminado con exito");
+                            }else{
+                                System.out.println("Ha ocurrido un problema al eliminar el piso");
+                            }
+                        }
+                    }else{
+                        System.out.println("No se ha encontrado el piso ingresado");
+                    }
+                    break;
+                    
+                case "6":
                     controlHotelStats = false;
                     break;
                     

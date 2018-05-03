@@ -13,6 +13,15 @@ public class Habitacion {
     private boolean habilitado; //Indicador si esta habilitada la habitacion
     private int capacidad;  //Capacidad de clientes de la habitacion, puede ser una o dos personas OJO:Las habitaciones con numero par deben ser dobles
     private boolean disponible; //Indica si se puede utilizar la habitacion en caso de reserva o venta
+    private double precio;
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
 
     public Habitacion(String codHabitacion,boolean habilitado,int capacidad,boolean disponible) {
         this.codHabitacion=codHabitacion;
