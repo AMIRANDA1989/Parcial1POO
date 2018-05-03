@@ -7,12 +7,10 @@ package com.classes;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
-
-/**
+/*
  *
  * @author allan
- */
+*/
 public class Piso {
     private String codPiso;
     private boolean habilitado;
