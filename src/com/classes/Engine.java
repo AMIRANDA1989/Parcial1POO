@@ -320,10 +320,10 @@ public class Engine {
     
     private void ingresoCliente(){
         Cliente c []= new Cliente[7];
+        
         String nombre,apellido,sexo,email;
         int idCliente=0,edad=0,telefono=0,dui=0,numTarjeta=0;
         
-        for(int i=0; i<c.length ;i++){
         System.out.println("Ingresando datos personales...");
         System.out.println("Ingrese nombre:");
         nombre=in.nextLine();
@@ -346,8 +346,8 @@ public class Engine {
         in.nextLine();
         System.out.println("Datos ingresados exitosamente...");
         System.out.println("");
-        c[i]=new Cliente(idCliente,nombre,apellido,dui,edad,sexo,telefono,email,numTarjeta);
-        }
+        
+        c[idCliente]=new Cliente(nombre,apellido,dui,edad,sexo,telefono,email,numTarjeta);
     } 
     
     private void reservaHotel(){
@@ -369,7 +369,8 @@ public class Engine {
                 case "1":
                     System.out.println("**********Realizar reservacion**********"  );
                     this.ingresoCliente();
-                    System.out.println("Seleccionando habitación del cliente..."   );
+                    System.out.println(""  );
+                    System.out.println("**********Seleccionando Habitación del Cliente**********"   );
                     System.out.println("Clase de habitacion a hospedarse:"         );
                     System.out.println("  1.Sencilla         2.Doble  "            );
                     
