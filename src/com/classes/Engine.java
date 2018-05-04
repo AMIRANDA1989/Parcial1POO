@@ -336,7 +336,7 @@ public class Engine {
             switch (option) {
                 case "1":
                     System.out.println("**********Realizar reservacion**********"  );
-                    this.ingresoCliente();
+                    this.inputCliente();
                     System.out.println(""  );
                     System.out.println("**********Seleccionando Habitación del Cliente**********"   );
                     System.out.println("Clase de habitacion a hospedarse:"         );
