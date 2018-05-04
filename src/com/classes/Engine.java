@@ -425,7 +425,7 @@ public class Engine {
                     break;   
                     
                 case "3":
-                    System.out.println("***********Cancelar cliente**********");
+                    System.out.println("***********Eliminar cliente**********");
                     break;   
                     
                 case "4":
