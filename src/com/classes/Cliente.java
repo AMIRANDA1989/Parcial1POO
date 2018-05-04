@@ -8,7 +8,7 @@ package com.classes;
  * @author Nelson Flamenco
 */
 public class Cliente {
-    private int numCliente;
+    private int idCliente;
     private String nombre;
     private String apellido;
     private int dui;
@@ -18,8 +18,8 @@ public class Cliente {
     private String email;
     private int numTarjeta;
     
-    public Cliente(int numCliente,String nombre,String apellido,int dui,int edad, String sexo,int telefono,String email,int numTarjeta){
-        this.numCliente=numCliente;
+    public Cliente(int idCliente,String nombre,String apellido,int dui,int edad, String sexo,int telefono,String email,int numTarjeta){
+        this.idCliente=idCliente;
         this.nombre=nombre;
         this.apellido=apellido;
         this.dui=dui;
@@ -32,12 +32,12 @@ public class Cliente {
     
     public Cliente(){}
     
-    public int getNumCliente() {
-        return numCliente;
+    public int getIdCliente() {
+        return idCliente;
     }
     
-    public void setNumCliente(int numCliente) {
-        this.numCliente = numCliente;
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
     
     public String getNombre() {
