@@ -30,8 +30,9 @@ public class Cliente {
         this.numTarjeta=numTarjeta;
     }
     
-    public Cliente(){}
-    
+    public Cliente(String nombre, String apellido, int dui, int edad, String sexo, int telefono, String email, int numTarjeta) {
+    }
+
     public int getIdCliente() {
         return idCliente;
     }
