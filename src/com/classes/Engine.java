@@ -342,7 +342,7 @@ public class Engine {
                     System.out.println("Clase de habitacion a hospedarse:"         );
                     System.out.println("  1.Sencilla         2.Doble  "            );
                     
-                    this.input
+              
                     
                     
                     
@@ -567,7 +567,7 @@ public class Engine {
                     
                     System.out.println("Internet Ilimitado"                      );
                     System.out.println("Servicio a la Habitacion"                );
-                    System.out.println("Acceso a la piscina"     2                );
+                    System.out.println("Acceso a la piscina");
                     System.out.println("Acceso al buffet desayuno"               );
                     System.out.println("Acceso al minibar"                       );
                     break;
