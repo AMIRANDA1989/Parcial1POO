@@ -319,13 +319,18 @@ public class Engine {
     }  
     
     private void ingresoCliente(){
+        Cliente c []= new Cliente[7];
         String nombre,apellido,sexo,email;
-        int edad,telefono,numtarjeta;
+        int idCliente=0,edad=0,telefono=0,dui=0,numTarjeta=0;
+        
+        for(int i=0; i<c.length ;i++){
         System.out.println("Ingresando datos personales...");
         System.out.println("Ingrese nombre:");
         nombre=in.nextLine();
         System.out.println("Ingrese apellido:");
         apellido=in.nextLine();
+        System.out.println("Ingrese dui:");
+        dui=in.nextInt();
         System.out.println("Ingrese edad:");
         edad=in.nextInt();
         sexo=in.nextLine();
@@ -337,9 +342,12 @@ public class Engine {
         System.out.println("Ingrese e-mail:");
         email=in.nextLine();
         System.out.println("Ingrese numero tarjeta:");
-        numtarjeta=in.nextInt();
+        numTarjeta=in.nextInt();
+        in.nextLine();
         System.out.println("Datos ingresados exitosamente...");
         System.out.println("");
+        c[i]=new Cliente(idCliente,nombre,apellido,dui,edad,sexo,telefono,email,numTarjeta);
+        }
     } 
     
     private void reservaHotel(){
