@@ -318,38 +318,6 @@ public class Engine {
         }//fin while (controlHotelStats)
     }  
     
-    private void ingresoCliente(){
-        Cliente c []= new Cliente[7];
-        
-        String nombre,apellido,sexo,email;
-        int idCliente=0,edad=0,telefono=0,dui=0,numTarjeta=0;
-        
-        System.out.println("Ingresando datos personales...");
-        System.out.println("Ingrese nombre:");
-        nombre=in.nextLine();
-        System.out.println("Ingrese apellido:");
-        apellido=in.nextLine();
-        System.out.println("Ingrese dui:");
-        dui=in.nextInt();
-        System.out.println("Ingrese edad:");
-        edad=in.nextInt();
-        sexo=in.nextLine();
-        System.out.println("Ingrese sexo:");
-        sexo=in.nextLine();
-        System.out.println("Ingrese telefono:");
-        telefono=in.nextInt();
-        sexo=in.nextLine();
-        System.out.println("Ingrese e-mail:");
-        email=in.nextLine();
-        System.out.println("Ingrese numero tarjeta:");
-        numTarjeta=in.nextInt();
-        in.nextLine();
-        System.out.println("Datos ingresados exitosamente...");
-        System.out.println("");
-        
-        c[idCliente]=new Cliente(nombre,apellido,dui,edad,sexo,telefono,email,numTarjeta);
-    } 
-    
     private void reservaHotel(){
         String option;
         boolean reservaHotelStats = true;
@@ -405,7 +373,7 @@ public class Engine {
             }//fin swicth(reservaHotelStats)
         }//fin while (reservaHotelStats)
     }  
-    
+//***********************************************************************************************************************************
     private void clienteHotel(){
         String option;
         boolean clienteHotelStats = true;
@@ -426,15 +394,17 @@ public class Engine {
             switch (option) {
                 case "1":
                     System.out.println("***********Agregar cliente***********");
-                    this.ingresoCliente();
+                    this.inputCliente();
                     break;
                     
                 case "2":
                     System.out.println("**********Modificar cliente**********");
+                    this.modCliente();
                     break;   
                     
                 case "3":
                     System.out.println("***********Eliminar cliente**********");
+                    this.deleteCliente();
                     break;   
                     
                 case "4":
@@ -448,6 +418,45 @@ public class Engine {
         }//fin while (clienteStats)
     } 
     
+        private void inputCliente(){
+        ArrayList<Cliente> c = new ArrayList<>();
+        
+        String nombre,apellido,sexo,email;
+        int idCliente=0,edad=0,telefono=0,dui=0,numTarjeta=0;
+        
+        System.out.println("");
+        System.out.println("Ingresando datos personales...");
+        System.out.println("Ingrese nombre:");
+        nombre=in.nextLine();
+        System.out.println("Ingrese apellido:");
+        apellido=in.nextLine();
+        System.out.println("Ingrese dui:");
+        dui=in.nextInt();
+        System.out.println("Ingrese edad:");
+        edad=in.nextInt();
+        sexo=in.nextLine();
+        System.out.println("Ingrese sexo:");
+        sexo=in.nextLine();
+        System.out.println("Ingrese telefono:");
+        telefono=in.nextInt();
+        sexo=in.nextLine();
+        System.out.println("Ingrese e-mail:");
+        email=in.nextLine();
+        System.out.println("Ingrese numero tarjeta:");
+        numTarjeta=in.nextInt();
+        in.nextLine();
+        System.out.println("Datos ingresados exitosamente...");
+        System.out.println("");
+        
+        Cliente cliente=new Cliente(nombre,apellido,dui,edad,sexo,telefono,email,numTarjeta);
+        c.add(cliente);
+    } 
+        
+    private void modCliente(){}
+    
+    private void deleteCliente(){}
+
+//***************************************************************************************************************************************************
     private void adminHotel(){
         String option;
         boolean adminHotelStats = true;
