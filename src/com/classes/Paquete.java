@@ -6,6 +6,7 @@
 package com.classes;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /*
  * @author Nelson Flamenco
@@ -13,18 +14,19 @@ import java.util.Scanner;
 public class Paquete {
     private int codPaquete;
     private String nombre;
-    private String descripcion;
+    private Servicios[] servicios;
     private double preciopaquete;
     Scanner in = new Scanner(System.in); //Sirve para leer el input del usuario
     
-    public Paquete(int codPaquete,String nombre,String descripcion,double preciopaquete){
+    public Paquete(int codPaquete,String nombre,String servicios,double preciopaquete){
         this.codPaquete=codPaquete;
         this.nombre=nombre;
-        this.descripcion=descripcion;
         this.preciopaquete=preciopaquete;
     }
             
-    public Paquete(){}
+    public Paquete(){
+    this.servicios = new Servicios[10];
+    }
     
     public int getCodPaquete() {
         return codPaquete;
@@ -42,14 +44,7 @@ public class Paquete {
         this.nombre = nombre;
     }
     
-    public String getDescripcion() {
-        return descripcion;
-    }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-    
     public double getPreciopaquete() {
         return preciopaquete;
     }
@@ -57,4 +52,19 @@ public class Paquete {
     public void setPrecio(double preciopaquete) {
         this.preciopaquete = preciopaquete;
     }
+    
+  
+    
+    
+    public void agregarServicios(Servicios s){
+        
+       
+       
+       
+    }
+    
 }
+
+
+
+
